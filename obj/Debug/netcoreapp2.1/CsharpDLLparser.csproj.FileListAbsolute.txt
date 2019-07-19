@@ -1,0 +1,11 @@
+C:\Users\t-xinma\source\repos\CsharpDLLparser\bin\Debug\netcoreapp2.1\CsharpDLLparser.deps.json
+C:\Users\t-xinma\source\repos\CsharpDLLparser\bin\Debug\netcoreapp2.1\CsharpDLLparser.runtimeconfig.json
+C:\Users\t-xinma\source\repos\CsharpDLLparser\bin\Debug\netcoreapp2.1\CsharpDLLparser.runtimeconfig.dev.json
+C:\Users\t-xinma\source\repos\CsharpDLLparser\bin\Debug\netcoreapp2.1\CsharpDLLparser.dll
+C:\Users\t-xinma\source\repos\CsharpDLLparser\bin\Debug\netcoreapp2.1\CsharpDLLparser.pdb
+C:\Users\t-xinma\source\repos\CsharpDLLparser\obj\Debug\netcoreapp2.1\CsharpDLLparser.csprojAssemblyReference.cache
+C:\Users\t-xinma\source\repos\CsharpDLLparser\obj\Debug\netcoreapp2.1\CsharpDLLparser.csproj.CoreCompileInputs.cache
+C:\Users\t-xinma\source\repos\CsharpDLLparser\obj\Debug\netcoreapp2.1\CsharpDLLparser.AssemblyInfoInputs.cache
+C:\Users\t-xinma\source\repos\CsharpDLLparser\obj\Debug\netcoreapp2.1\CsharpDLLparser.AssemblyInfo.cs
+C:\Users\t-xinma\source\repos\CsharpDLLparser\obj\Debug\netcoreapp2.1\CsharpDLLparser.dll
+C:\Users\t-xinma\source\repos\CsharpDLLparser\obj\Debug\netcoreapp2.1\CsharpDLLparser.pdb
