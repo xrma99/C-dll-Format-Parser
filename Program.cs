@@ -10,9 +10,10 @@ namespace CsharpDLLparser
         static void readfile(string filepath)
         {
             //读取二进制文件
-            FileStream fs = new FileStream("C:\\Users\\t-xinma\\Documents\\Csharp_tryout.dll",FileMode.Open);
+            FileStream fs = new FileStream("C:\\Users\\t-xinma\\Documents\\CsharpHelloworld.dll", FileMode.Open);
             BinaryReader br = new BinaryReader(fs);
             Byte content;
+            char c;
             long totallen = br.BaseStream.Length;//total length
 
             //写入txt文件
@@ -22,7 +23,7 @@ namespace CsharpDLLparser
             while (br.BaseStream.Position<br.BaseStream.Length)
             {
                 content = br.ReadByte();
-                
+                c = (char)content;
                 Console.Write(content.ToString("X"));
                 sw.Write(content.ToString("X"));
             }
