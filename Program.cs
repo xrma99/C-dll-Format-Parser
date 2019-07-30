@@ -17,16 +17,28 @@ namespace CsharpDLLparser
             long totallen = br.BaseStream.Length;//total length
 
             //写入txt文件
-            FileStream fr = new FileStream("C:\\Users\\t-xinma\\Documents\\test.txt", FileMode.OpenOrCreate);
+            FileStream fr = new FileStream("C:\\Users\\t-xinma\\Documents\\Tes.txt", FileMode.OpenOrCreate);
             StreamWriter sw = new StreamWriter(fr);
 
+            int count = 0;
+            int line = 16;
             while (br.BaseStream.Position<br.BaseStream.Length)
             {
                 content = br.ReadByte();
                 c = (char)content;
-                Console.Write(content.ToString("X"));
+                if (content < line)
+                {
+                    Console.Write("0");
+                    sw.Write("0");
+                }
+                Console.Write(c);
                 sw.Write(content.ToString("X"));
+                count += 1;
             }
+
+
+            Console.WriteLine(count);
+
 
             fs.Close();
             br.Close();
