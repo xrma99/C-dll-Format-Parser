@@ -45,20 +45,14 @@ namespace CsharpDLLparser
             Byte content;
             char c;
             long totallen = br.BaseStream.Length;//total length
-
-            //写入txt文件
-            FileStream fr = new FileStream("C:\\Users\\t-xinma\\Documents\\Test.txt", FileMode.Create);
-            StreamWriter sw = new StreamWriter(fr);
-
             
-            int count = 0,border=0;
+            int border=0;
             int flag=0;
             int paragraph_sz = 16;//unit:byte
             int section_c=7;//一共有多少个section，最多有7个
             int[] section_sz = new int[7];
+            int[] total_sz = new int[7];//.text .rsrc .reloc
 
-            byte[] rawdata = new byte[16];
-            byte[] data = new byte[8];
 
             while (br.BaseStream.Position<br.BaseStream.Length)
             {
@@ -134,7 +128,16 @@ namespace CsharpDLLparser
                         section_sz[border] = Reverseread(br.ReadBytes(4),0,3);
                         Console.WriteLine();
 
-                        br.ReadBytes(28);
+                        Console.Write("Virtual Address: ");
+                        Reverseread( br.ReadBytes(4),0,3);
+                        Console.WriteLine();
+
+                        Console.Write("Total size: ");
+                        total_sz[border] = Reverseread(br.ReadBytes(4),0,3);
+                        Console.WriteLine();
+
+
+                        br.ReadBytes(20);
 
                         border++;
                         if (border >= section_c)//section header 结束
@@ -151,6 +154,7 @@ namespace CsharpDLLparser
                             Console.WriteLine("Section Content:");
                             printbyte(br.ReadBytes(section_sz[i]), 0, section_sz[i] - 1);
                             Console.WriteLine();
+                            br.ReadBytes(total_sz[i]-section_sz[i]);
                         }
                         flag++;
                         break;
@@ -159,15 +163,10 @@ namespace CsharpDLLparser
                         break;
                 }
                 
-                //sw.Write(content.ToString("X"));
             }
 
+            br.Close();
             fs.Close();
-            br.Close();
-
-            fr.Close();
-            br.Close();
-
             
 
         }
