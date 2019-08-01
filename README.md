@@ -10,11 +10,15 @@ The file format is as follows:
 
 1. MZ file header
 
-2. PE file header
+2. Default part: This program cannot be run in DOS mode.
 
-3. Sections' headers
+3. PE file header
 
-4. Sections' content in order
+4. Sections' headers
+
+5. Sections' content in order
+
+PS: The all-zero reserved size = size of raw data - size of section
 
 # Up to seven sections: .data .idata .rdata .reloc .rsrc .text .textbss
 
