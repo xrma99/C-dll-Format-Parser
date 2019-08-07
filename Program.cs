@@ -30,11 +30,7 @@ namespace CsharpDLLparser
             int i;
             for (i = lowindex; i <= largeindex; i++)
             {
-                if (data[i] < 16)
-                {
-                    Console.Write("0");
-                }
-                Console.Write(data[i].ToString("X"));
+                Console.Write(data[i].ToString("X2"));
             }
         }
         static void readfile(string filepath)
@@ -159,7 +155,7 @@ namespace CsharpDLLparser
                         flag++;
                         break;
                     default:
-                        Console.Write(br.ReadByte().ToString("X"));
+                        Console.Write(br.ReadByte().ToString("X2"));
                         break;
                 }
                 
